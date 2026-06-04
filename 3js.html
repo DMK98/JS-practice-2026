@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2 id="h2">function</h2>
+        <button onclick="alert('hi')">hello</button>
+        <!-- <button class="btn" onclick="alert('hi')">inline alert</button>
+        <button class="btn" onclick="thisisAlert()">alert</button>
+        <button class="btn" onclick="getAge()">enter Age</button>
+        <button class="btn" onclick="letconfirm()"> check</button> -->
+
+    </div>
+
+    <script>
+        /*function thisisAlert() {
+            alert("hello this is alert")
+        }
+        function getAge() {
+            let v=prompt("enter age");
+            console.log(v);
+        }
+        function letconfirm(){
+            let result=confirm("are u sure to delete")
+            if(result){
+                console.log("deleted");                
+            }else{
+                console.log("canceled");                    
+            }
+        }*/
+
+        function sayHi() {       //function declaration
+            var x = 3;
+            var y = 4;
+            var z = x + y;
+            // console.log(z);            
+            return z
+        }
+        // sayHi()
+        // console.log(sayHi());
+
+        // console.log(sayBye());
+        var sayBye = function () {  //function expression
+            return "saybyes"
+        }
+        // console.log(sayBye());
+        /* window.onclick=function(){
+             console.log(this);            
+         }*/
+        document.body.onclick = function () {
+            console.log(this);
+        }
+        h2.onclick = function () {
+            console.log(this);
+        }
+        // console.log(typeof(sayHi));
+        // console.log(typeof(sayHi()));
+        /* function mean(){
+             var x=3;
+             var y=4;
+             var z=5;
+             var t=x+y+z;
+             var m=t/3;
+             return m;
+         }
+         console.log(mean());*/
+        /* function mean(x, y, z) {
+             var t = x + y + z;
+             var m = t / 3;
+             return m;
+         }
+         console.log(mean(4,5,9));
+         console.log(mean(10,20,30));*/
+
+        /*function mean(x=0, y=2, z) {
+           var t = x + y + z;
+           var m = t / 3;
+           return m;
+       }
+       // console.log(mean(4,5,9));
+       // console.log(mean(undefined, undefined, 30));
+       // console.log(mean(30));
+       console.log(mean(3,4,5));
+       console.log(mean("1",2,3));*/
+
+        /* (function(){
+          console.log("auto calling function");        
+         }())*/
+
+        /* var x = 3;
+       function outer() {
+           var y = 4
+           function inner() {
+               var z = 5;
+               return x + y + z;
+           }
+           return inner()
+       }
+
+       console.log(outer());*/
+
+        /*var x = 3;
+        function outer() {
+            var y = 4
+            function inner() {
+                var z = 5;
+                return x + y + z;
+            }
+            // return inner();
+            return inner;
+            
+        }
+        // console.log(outer());
+        
+        console.log(outer()());*/
+
+        /* function carrying(){return function(){return function(){return"hello"}}};
+         console.log(carrying()()());*/
+
+       /* function startClasstopic(topic = "", cb1, cb2) {
+            console.log(`Starting ${topic}`);
+            cb2();
+            cb1();
+        }
+        function statingProjector(mode) {
+            console.log(`using projector on ${mode}`);
+        }
+        function turnOnAc(temp) {
+            console.log(`using AC on ${temp}`);
+        }
+        startClasstopic("Javascript", statingProjector, turnOnAc)*/
+
+       /* const data = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // const data2=data.filter((i)=>i%2==0)
+        const data2 = data.filter((i) => { return i % 2 == 0 })
+        console.log(data2);*/
+        setTimeout(console.log(1))
+        setTimeout(()=>{console.log(2,"delaying task");
+        },1000)
+        setTimeout(console.log(3))
+        
+
+
+
+        console.log("done");
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS If Else , switch and try catch</title>
+</head>
+
+<body>
+    <h2>JS If Else , switch and try catch</h2>
+
+    <script>
+        "use Strict";
+        /*let x=3;
+        if(x>10){
+            console.log(x);            
+        }*/
+
+        /* let a=false;
+         if(a==0){
+             console.log("zero");            
+         }else if(a>0){
+             console.log("positive");            
+         }else if(a<0){
+             console.log("negative");            
+         }
+         else{
+             console.log("not a number");            
+         }*/
+
+
+        /* const score = 56;
+         if (score == 75) { console.log("cs") };
+         if (score >= 65) { console.log("IT") };
+         if (score >= 60) { console.log("aero") };
+         if (score >= 50) { console.log("other") }
+         else { console.log("not eligible") }*/
+
+        /* const t = "A";
+         // if(isNaN(t)){console.log("not a number")};
+         if (Number.isFinite(t)) {
+             if (t%2===0){
+                  console.log("even");                    
+             }else{console.log("odd");
+             }
+         } else {
+             console.log("not a numner");
+             
+         }*/
+
+        /*const m=8;
+        if(m==1){console.log("jan")}
+        else if(m==2){console.log("feb")}
+        else if(m==3){console.log("march")}
+        else if(m==4){console.log("Apr")}
+        else{console.log("invalid month")}*/
+      /*  const m = 3;
+        switch (m) {
+            case 1: console.log("jan"); break;
+            case 2: console.log("feb"); break;
+            case 3: console.log("mar"); break;
+            case 4: console.log("apr"); break;
+            case 5: console.log("may"); break;
+            default: console.log("invalid");
+        }*/
+
+       /* let a = 2;
+        switch (a) {
+            case 1: console.log("jan"); break;
+            case 2: console.log("feb"); break;
+            case 3: console.log("mar"); break;
+            case 4: console.log("apr"); break;
+            case 5: console.log("may"); break;
+            case 6: console.log("jun"); break;
+            default: console.log("invalid");
+        }*/
+
+        /*const month=["jan","feb"];
+        console.log(month[0]);*/
+        /*
+        try{
+            navigator.getbattery().then(i== console.log(i.level*100))            
+        }
+        catch(err){
+            console.warn(err);            
+        }*/
+
+        const age=92;     
+       /* try{
+            if(isNaN(age)){throw"not a number"}
+        }
+        catch(err){
+            console.warn("not a number");            
+        }
+        console.log("done");*/
+
+        try{
+            if(isNaN(age)){throw new Error("not a number")}
+            if(age<=0){throw new Error ("age less then 0 ")}
+            if(age>=90){throw new Error ("age greater then 90 ")}
+        }
+        catch(err){
+            console.warn(err);
+            
+        }
+        
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

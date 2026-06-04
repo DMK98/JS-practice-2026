@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Data Types, operators, strings & numbers</title>
+    <style>
+        button{cursor: pointer;}
+        .btn{padding:.5rem 1rem; border:1px solid;border-radius: 10px;  background: none;}
+    </style>
+</head>
+
+<body>
+    <h1>JS Data Types, operators, strings & numbers</h1>
+    <button class="btn" onclick="alert('hello')">Click</button>
+    <button class="btn" onclick="prompt('Enter age')">Age</button>
+    <script>
+        "use strict";
+        // PRIMITIVE DATA TYPE
+        // ============================
+        let x = "hello js"        //string
+        // console.log(x);
+        // x=2;                    //number
+        // console.log(x);
+        let y = 3;                //number
+        let t = true;             //boolean
+        let f = false;           //boolean
+        let u;                  //undefined in future value can be added
+        let n = null;            //null emptiness         
+        // u=93;                  //earlier u was undefine but now we assigned 93 in u
+        // let age=prompt("enter age")
+        // console.log(age);
+        // const age =document.querySelector("h1");
+        // console.log(age);
+        // let c=90071992547409915555                      // normal 
+        // let b=90071992547409915555n                      //bigint
+        // console.log(c);
+        // console.log(b);
+        // let s1=Symbol("n"),s2=Symbol("n");
+        // console.log(s1===s2);
+
+        // reference data type
+        // const cars=[]
+        // let a=5;
+        // let b=10;
+        // [a,b]=[b,a];
+        // console.log("a:",a,"b:",b);
+        /*const cars=["alto","swift","baleno"];
+        const fruits=["apple","banana","guava",12];
+        const alto={name:"alto", power:60};
+        console.log(cars[0]);
+        console.log(alto.power);
+        console.log(fruits);*/
+        /*function abc(){
+            var x=3;
+            x=x*2;
+            x--;
+            // console.log(x);            
+            return x;
+        }
+        abc()*/
+
+        // console.log(typeof(x));
+        // console.log(typeof(y));
+        // console.log(typeof(t));
+        // console.log(typeof(u));
+        // console.log(typeof(n));
+        // console.log(typeof(abc));
+        // console.log(typeof(abc()));
+        // const fruits = ["apple", "banana", "guava", 12];
+        // const alto = { name: "alto", power: 60 };
+        // console.log(typeof(fruits));
+        // console.log(typeof(alto));
+        // console.log(y+2);
+        // console.log(y++);   // unary operator.
+        // console.log(y);
+        // let q=5
+        // console.log(++q);
+        // console.log(q++);
+        // console.log(q++);
+        // console.log(2 + 3);           // binary operator
+        // let c = 5;
+        // c++;
+        // ++c
+        // console.log(c);
+        // --c;
+        // console.log(c);
+        // (3>2) ? console.log("T"):console.log("F");
+        // (3>8) ? console.log("T"):console.log("F");  // Ternary operator
+        // console.log(2+5);
+        // console.log(2+"A");
+        // console.log(2+"A"+2);
+        // console.log("2"+3+5);
+        // console.log(2+3+"2"+3+4);
+        // console.log((2+3)+"2"+(3+4));
+        // console.log('100'-10);   //10
+        // console.log('A'-10);    //NaN
+        // console.log(5/2);
+        // console.log(2%5);
+        // console.log(2**3);
+        // console.log(2**10);
+        // console.log(2>1 && 3>1);  //true
+        // console.log(2>1 && 3>5);    //false
+        // console.log(2 > 1 || 3 > 5);    // true
+        // console.log(2=="2");
+        // console.log(2==="2");
+        // console.log(true+1);
+        // console.log(true==1);
+        // console.log(true===1);
+        // x="lorem don't epsum" ;  
+        // x='lorem don't epsum';  //error
+        // console.log(x);
+        // console.log(x.length);
+        // console.log(x.toUpperCase());
+        // const n1=3, n2=4;
+        // console.log(`sum of ${n1+n2}`);
+        // let l="mango2"
+        // console.log(l);
+        // console.log(l[0]);
+        // console.log(l.length-5);        
+        // console.log(l[l.length-4]);
+        // console.log(l[l.length-1]);
+        // console.log(l.at(0));
+        // console.log(l.at(1));
+        // console.log(l.at(-1));
+        // console.log(l.charAt(1));
+        // console.log(l.charCodeAt(1));
+        // console.log(l.substr(2));
+        // console.log(l.substr(1,2));
+        // console.log(l.search('a'));
+        // console.log(l.search(/\d/));
+        // let m="manish kumar"
+        // console.log(m.trim());
+        // console.log(m.replace("m","N"));
+        // console.log(m.split());
+        // console.log(m.split(" "));
+        // console.log(m.split(""));
+        
+        let k=101;
+        // let j=01;  //can't start from zero
+        // console.log(k);
+        // // console.log(Number("100"));
+        // // console.log(Number(true));
+        // // console.log(k.toString()+"A");
+        // // console.log(k.toString().length);
+        // // console.log(k.toExponential());
+        // console.log(isNaN("100px"));
+        // console.log(isNaN("a"));
+        // console.log(isNaN(100));
+        // console.log(isNaN(true));
+        // console.log(Number.Infinity+45);
+        // console.log(Number.isFinite(true));
+        // console.log(Number.isFinite(1));
+        // console.log(Number.isFinite(Infinity));
+        // console.log(Number.isFinite(10));
+        
+        
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
