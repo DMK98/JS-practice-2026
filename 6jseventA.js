@@ -62,4 +62,30 @@ document.addEventListener("DOMContentLoaded",function(){
     console.log("DOM content Loaded");    
 })
 
-1:18
+document.querySelector("h1").addEventListener("click",clickOnce);
+function clickOnce(){
+    console.log(this);
+    this.removeEventListener("click",clickOnce)
+}
+
+/*document.querySelectorAll("ol li").forEach(i=>{
+    i.addEventListener("click",function(){console.log(this)})
+})*/
+
+/*document.querySelector("ol").addEventListener("click",function(e){
+    console.log(e.target);
+    if(e.target.tagName=="LI"){
+        console.log(e.target.textContent);        
+    }
+})*/
+
+document.leapyear.addEventListener("submit",function(e){
+    e.preventDefault();
+  const year = this.year.value;
+  console.log(year);
+  if(year%400==0||(year%100!=0 && year%4==0)){
+    this.out.innerHTML="leap year"
+  }   else{
+    this.out.innerHTML="not a leap year";
+  }
+})
