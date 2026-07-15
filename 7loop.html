@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loop</title>
     <style>
-        *{margin: 0;padding: 0;}
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        table,td{
+            border: 1px solid ;margin: 3px;
+        }
+        .pattern{margin: 1rem 0;}
+        .row{display:flex ;}
+        .row .col{flex: 1 0 10%; border: 1px solid; padding: 5px;}
     </style>
 </head>
+
 <body>
     <header>
         <h1>loop</h1>
@@ -18,13 +29,28 @@
         <ol>
 
         </ol>
+        <label>Year :
+            <select class="year">
+                <option value="" selected disabled> --Choose Year--
+                </option>
+
+            </select>
+        </label>
+        <table>
+
+        </table>
+        <div class="pattern">
+
+        </div>
+
+
     </main>
     <footer>
         <p>&copy;</p>
         <p>All right reserved</p>
-        
     </footer>
 
     <script src="./7 loop.js"></script>
 </body>
+
 </html>

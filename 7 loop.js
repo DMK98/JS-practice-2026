@@ -45,8 +45,47 @@ console.log("iteration count >>",count);*/
     console.log(i);    
 }*/
 
-for(let i=1;i<=5;i++ ){
-    document.querySelector("main ol").innerHTML+="<li>List item</li>"
+/*for(let i=1;i<=5;i++ ){
+    document.querySelector("main ol").innerHTML+="<li>List item</li>";
+}*/
 
+
+/*console.time("t");
+let option = ""
+for (let i = 1; i <= 10; i++) {
+    // document.querySelector(".year").innerHTML+=`<option>${i}</option>`;
+    option += `<option>${i}</option>`
 }
-38
+document.querySelector(".year").innerHTML += option
+console.timeEnd("t");*/
+
+
+/*for (let i = 1; i < 10; i++) {
+    // console.log(i);    
+    for (let j = 1; j <= 5; j++) {
+        // console.log(i);            
+        // console.log(i*j);            
+        console.log(i);            
+        console.log(j);            
+    }
+    console.log("------------");    
+}*/
+
+/*for(let i=1;i<=10;i++){
+let tr=document.createElement("tr");
+    for(let j=1;j<=10;j++){
+        tr.innerHTML+=`<td>${i*j}</td>`
+    }
+    document.querySelector("table").appendChild(tr)
+}*/
+
+
+for(let i=1;i<=10;i++){
+let row=document.createElement("div");
+row.classList.add("row");
+    for(let j=1;j<=10;j++){
+        row.innerHTML+=`<div class="col">${i*j}</div>`
+    }
+    document.querySelector(".pattern").appendChild(row)
+}
+
