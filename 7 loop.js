@@ -80,12 +80,47 @@ let tr=document.createElement("tr");
 }*/
 
 
-for(let i=1;i<=10;i++){
-let row=document.createElement("div");
-row.classList.add("row");
-    for(let j=1;j<=10;j++){
-        row.innerHTML+=`<div class="col">${i*j}</div>`
+// for(let i=1;i<=5;i++){
+/*let count=0;
+for(let i=1;i<=5;i=i+1){
+// let row=document.createElement("div");
+// row.classList.add("row");
+    // for(let j=i;j<=5;j++){
+    // for(let j=i;j<=5;j++){
+    // for(let j=i;j<=10+1-i;j++){
+    for(let j=1;j<=i;j++){
+        // row.innerHTML+=`<div class="col">${i*j}</div>`
+        // row.innerHTML+=`<div class="col">${"*"}</div>`
+        // row.innerHTML+=`<div class="col">${j}</div>`;
+        // row.innerHTML+=`<div class="col">${j}</div>`;
+        // row.innerHTML+='<div class="col">*</div>';
+        // count++;
     }
-    document.querySelector(".pattern").appendChild(row)
+//     console.log("-------------");        
+//     document.querySelector(".pattern").appendChild(row);
+// }
+// console.log("countis ::",count);
+*/
+
+
+/*const str=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto numquam voluptatum delectus neque quam quibusdam aut obcaecati harum porro illum."*/
+// console.log(str.length);
+
+/*const l=str.length;
+let counter=0;
+for(let i=0;i<=l;i++){
+    // console.log(str);
+    if(str[i]==" "){counter++}    
 }
+console.log(counter);*/
+
+const str=document.querySelector(".str").textContent;
+const l=str.length;
+let counter=0;
+for(let i=0;i<=l;i++){
+    // console.log(str);
+    if(str[i]==" "){counter++}    
+}
+console.log(counter);
+console.log(counter + 1);
 
