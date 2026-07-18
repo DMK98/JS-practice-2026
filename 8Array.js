@@ -1,5 +1,5 @@
 "use strict";
-const month=["Jan","Feb","Mar","Apr",];
+const month=["Jan","Feb","Mar","Apr","may","june"];
 const car= {name:"Swift",power:80,torque:110};
 month.push("may");
 
@@ -70,7 +70,7 @@ month.push("may");
 // console.log(number4.flat(2));
 
 
-const number5=[1,2,3,4,5,6,7,8,9]
+// const number5=[1,2,3,4,5,6,7,8,9];
 
 // const t=number5.map(i=>i+1);
 // console.log(t);
@@ -89,8 +89,75 @@ const number5=[1,2,3,4,5,6,7,8,9]
 
 // const z= number5.find(i=>i%2==0)
 // console.log(z);
-const z= number5.findIndex(i=>i%2==0)
-console.log(z);
+// const z= number5.findIndex(i=>i%2==0)
+// console.log(z);
+// const number5=[1,2,3,4,5,6,7,8,9];
+// const t=number5.fill(0)
+// const t=number5.fill(0,4)
+// const t=number5.fill(0,2,5)
+// console.log(t);
+// const t=number5.some(i=>i%2==0);
+// console.log(t);
+// const t=number5.every(i=>i%2==0);
+// console.log(t);
+
+/*let str="abcd";
+let pics=document.querySelectorAll("img");
+console.log(str);
+str=Array.from(str)
+pics=Array.from(pics);
+console.log(Array.isArray(pics));
+console.log(Array.isArray(str));*/
+
+const number5=[1,2,3,4,5,6,7,8,9];
+/*number5.forEach((a, b)=>{
+    console.log(b,a );    
+});*/
+
+/*for(let i in number5){
+    console.log(number5[i]);    
+}*/
+
+
+/*for(let i of number5){
+    console.log(i);    
+}*/
+
+/*number5.map((a,b)=>{
+    console.log(b,a);    
+})*/
+
+/*for(let i=0,j=i<=month.length;i<=j;i++){
+       console.log(month[i]);        
+}*/
+/*number5.forEach(i=>{
+    document.querySelector("ol").innerHTML+=`<li>${i}</li>`
+});*/
+
+/*month.forEach((ind,i)=>{
+    document.querySelector("select").innerHTML+=`<option>${i+1}${ind}</option>`
+});*/
+
+
+const data=[
+    // ["a1","a2","a3"],
+    ["a1","a2","a3","a4"],
+    ["b1","b2","b3","b5"],
+    ["c1","c2","c3","c5"],
+]
+
+data.forEach(i => {
+    const tr=document.createElement("tr");
+    console.log(i);
+    i.forEach(j=>{
+        console.log(j);
+        tr.innerHTML+=`<td>${j}</td>`
+        
+    })    
+    document.querySelector("table").appendChild(tr);    
+});
+
+
 
 
 

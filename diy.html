@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alert('hi')">alert</button>
+    <button onclick="alerting()">alerting</button>
+    <button onclick="getAge()">enter age</button>
+    <button onclick="deleting()">delete</button>
+      
+    
+    <script>
+        function alerting(){
+            alert("welcome")
+        }
+        function getAge(){
+            let v=prompt("enter age")
+            console.log(v);           
+        }
+        function deleting(){
+               let v=confirm(" are u sure to delete");
+               if(v){
+                console.log("deleted");                
+               } else{
+                console.log("canceled");                
+               }
+        }
+    </script>
+</body>
+</html>
