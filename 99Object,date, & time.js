@@ -119,7 +119,7 @@ function sum(x, y, z) {
 // console.log(sum.apply(null,data));
 console.log(sum(...data));
 
-// =======================Date & Time=============================
+// =======================Timeer=============================
 // setTimeout(()=>{
 //     console.log("check");    
 // }, 1000)
@@ -140,8 +140,8 @@ setInterval(()=>{
 },1000)*/
 
 let count = 0;
-function timer(){
-    const interval=setInterval(() => {
+function timer() {
+    const interval = setInterval(() => {
         count++;
         console.log(count);
         document.querySelector(".counter").textContent = `Counter is  ${count}`;
@@ -154,11 +154,33 @@ function timer(){
 }
 
 let countButton = document.querySelector(".countButton");
-countButton.addEventListener("click", timer)
+countButton.addEventListener("click", timer);
 
+// setInterval(() => {
+
+// document.querySelector(".date").innerHTML=new Date()
+
+// }, 1000);
+// =======================Date=============================
+
+function showDate() {
+    document.querySelector(".date").innerHTML = `${new Date()}<br/>`;
+    document.querySelector(".date").innerHTML += `${new Date(0)}<br/>`;
+    document.querySelector(".date").innerHTML += `${new Date().getDate()}<br/>`;
+    document.querySelector(".date").innerHTML += `${new Date().getMonth() + 1}<br/>`;
+    document.querySelector(".date").innerHTML += `${new Date().getFullYear()}<br/>`;
+    document.querySelector(".date").innerHTML += `date is : ${new Date().toDateString()}<br/>`;
+    document.querySelector(".date").innerHTML += `locale date is : ${new Date().toLocaleDateString()}<br/>`;
+    document.querySelector(".date").innerHTML += `TIME  : ${new Date().toLocaleTimeString()}<br/>`;
+    document.querySelector(".date").innerHTML += `Date & TIME  : ${new Date().toLocaleString()}<br/>`;
+    document.querySelector(".date").innerHTML += `Date & TIME  : ${new Date().toUTCString()}<br/>`;
+    document.querySelector(".date").innerHTML += `Date & TIME  : ${new Date().toISOString()}<br/>`;
+}
+showDate();
+setInterval(showDate, 1000)
+// document.querySelector(".date").innerHTML=new Date()
 
 
 
 console.log("end");
 
-1:1:40
