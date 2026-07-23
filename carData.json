@@ -1,0 +1,11 @@
+[
+    { "name": "swift", "type": "hatchback", "price": 810000 },
+    { "name": "dzire", "type": "hatchback", "price": 880000 },
+    { "name": "ciaz", "type": "sedan", "price": 1080000 },
+    { "name": "baleno", "type": "hatchback", "price": 850000 },
+    { "name": "brezza", "type": "suv", "price": 990000 },
+    { "name": "grand vitara", "type": "suv", "price": 1990000 },
+    { "name": "alto", "type": "hatchback", "price": 400000 },
+    { "name": "wagon r", "type": "hatchback", "price": 500000 },
+    { "name": "jimny", "type": "suv", "price": 1400000 }
+]
