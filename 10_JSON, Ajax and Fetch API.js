@@ -7,9 +7,9 @@ cars = JSON.parse(cars);
 // console.log(cars);
 // console.log(car);
 let j = JSON.stringify({ name: "avi", id: 22 });
-console.log(j);
+// console.log(j);
 let k = JSON.stringify(["a", "b"]);
-console.log(k);
+// console.log(k);
 
 /*const Json_data = [
     { "name": "swift", "type": "hatchback", "price": 810000 },
@@ -33,15 +33,15 @@ req.addEventListener("load", function () {
 });
 console.log("done");*/
 
-{
+/*{
     const req = new XMLHttpRequest();
     req.open("get", "footer.html");
     req.send();
     req.addEventListener("load", function () {
         document.querySelector(".footer-div").innerHTML += this.response
     });
-}
-{
+}*/
+/*{
     const req = new XMLHttpRequest();
     req.open("get", "carData.json");
     req.send();
@@ -51,20 +51,53 @@ console.log("done");*/
         console.log(typeof (data));
         data = JSON.parse(data);
         // console.table(data); 
-        data.sort((x, y) => { return x.price - y.price });
-
+        const sortPara = "type"
+        data.sort((x, y) => {
+            //  return x.price - y.price;
+            if (x.name < y.name) {
+                return -1
+            } else if (x.name < y.name) {
+                return 1
+            };
+        });
         data.forEach((element, index) => {
-            console.log(index, element);
+            // console.log(index, element);
             document.querySelector(".table tbody").innerHTML += `<tr>
                     <td>${index + 1}</td>
                     <td>${element.name}</td>
                     <td>${element.type}</td>
-                    <td>${element.price}</td>
-                   
+                    <td>${element.price}</td>                   
                 </tr>`
         });
     });
+};*/
 
-};
+// fetch("data.txt").then(i=>console.log(i.ok));
+// fetch("data.txt").then(i=>console.log(i.status));
+// console.log(fetch("data.txt"));
+// fetch("data.txt").then(i=>i.text().then(i=>console.log(i)));
+// fetch("data.txt").then(i=>i.text()).then(i=>console.log(i));
+// fetch("footer.html").then(i=>i.text()).then(i=>console.log(i));
+// fetch("test.html").then(i=>i.text()).then(i=>console.log(i));
+// fetch("test.html").then(i=>i.text()).then(i=>document.querySelector(".test").innerHTML=i);
+// fetch("carData.json").then(response=>response.text()).then(response=>console.log(response));
+// fetch("carData.json").then(response=>response.json()).then(response=>console.table(response));
+// fetch("carData.json").then(response=>response.json()).then(response=>document.querySelector(".test").innerHTML=response);
+/*fetch("https://api.github.com/users")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    });*/
 
-41:00
+function gitHub() {
+    /*fetch("https://api.github.com/users/manish").then(response=>response.json()).then(response=>console.log(response));*/
+    fetch("https://api.github.com/users/manish").then(response => response.json()).then((response)=>{
+        for(let i in response){
+            document.querySelector("ol").innerHTML+=`<li>${i},${response[i]}</li>`
+            
+        }
+    })
+}
+gitHub()
+
+1:05:13
