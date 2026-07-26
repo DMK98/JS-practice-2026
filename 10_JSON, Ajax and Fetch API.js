@@ -93,11 +93,45 @@ function gitHub() {
     /*fetch("https://api.github.com/users/manish").then(response=>response.json()).then(response=>console.log(response));*/
     fetch("https://api.github.com/users/manish").then(response => response.json()).then((response)=>{
         for(let i in response){
-            document.querySelector("ol").innerHTML+=`<li>${i},${response[i]}</li>`
-            
+            document.querySelector("ol").innerHTML+=`<li>${i},${response[i]}</li>`;            
         }
     })
 }
 gitHub()
 
-1:05:13
+// document.querySelector('[name="search"]').addEventListener("submit",function(){});
+
+document.search.addEventListener("submit",function(e){
+    e.preventDefault();
+    const pin= this.pin.value;
+    console.log(pin);
+    const url=`https://api.postalpincode.in/pincode/${pin}`;
+    fetch(url)
+    .then(response=>response.json()).then(
+        (response)=>{console.log(response);
+        if(response[0].Status=="Error"){
+            document.querySelector(".err").innerHTML="No pincode found"
+        }else{
+            let res=response[0].PostOffice;
+            console.log(res);
+            res.forEach((elem,index) => {
+                console.log(index,elem);
+                document.querySelector(".table tbody").innerHTML += `<tr>
+                    <td>${index + 1}</td>
+                    <td>${elem.name}</td>
+                    <td>${element.type}</td>
+                    <td>${element.price}</td>                   
+                </tr>`
+                
+            });           
+            
+        };
+    }
+
+    )
+    
+})  
+
+
+
+1:17:33
