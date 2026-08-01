@@ -110,5 +110,107 @@ class Toyota extends Car {
 // setTimeout(()=>alert("hello"),1000)
 // console.log("done");
 // alert("hello")
+ 
+/*
 document.body.addEventListener("click",function(){console.log(this)});
+
+console.time("t");
+setTimeout(()=>{
+    console.log("hello");
+    
+},1000);
+
+console.log("End Done ");
+
 console.log("done");
+// console.timeEnd("t");
+
+Promise.resolve(console.timeEnd("t")).then(i=>console.log(i));
+Promise.resolve("manish").then(i=>console.log(i));
+console.log();
+*/
+
+/*
+const promise= new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        const success=true;
+        if(success){
+            resolve("data loaded successfull!");
+        }else{
+            reject("someting went wrong")
+        }
+    },1000)
+});
+promise.then(result=>console.log(result))
+.catch(result=>console.log(Error));
+*/
+/*
+const promise=new Promise((resolve)=>{
+    resolve("manish");
+});
+promise.then(i=>console.log(i));
+
+
+console.log("done");
+*/
+
+/*
+const tryingpromise=new Promise((xz)=>{
+    setTimeout(()=>xz("ccsccsc"),1000)
+})
+tryingpromise.then(i=>console.log(i));
+*/
+
+/*const promise=new Promise((resolve,reject)=>{
+    resolve("resolved");
+    reject("rejected");
+});
+
+function res(i){console.log(i,j)}
+function rej(i){console.warn(i)}
+
+// promise.then(i=>console.log(i,j)).catch(i=>console.warn(i));
+promise.then(res).catch(rej);
+*/
+
+/*const p=Promise.resolve(1);
+p.then(i=>console.log(i))
+*/
+
+const x=Promise.resolve(1);
+const y=Promise.resolve(2);
+const z=Promise.resolve(3);
+// const z=Promise.reject(3);
+
+const p=[x,y,z];
+// console.log(p);
+// Promise.all(p).then(i=>console.log(i)).catch(e=>console.warn(e));
+// Promise.allSettled(p).then(i=>console.log(i)).catch(e=>console.warn(e));
+// Promise.any(p).then(i=>console.log(i)).catch(e=>console.warn(e));
+// Promise.race(p).then(i=>console.log(i)).catch(e=>console.warn(e));
+
+// function showResult(){
+//     return Promise.resolve(1);
+// }
+
+
+// showResult().then(i=>console.log(i)).catch(e=>console.warn(e));
+
+/*async function runAsync(){
+    console.log("sync");    
+    const p=function(){return setTimeout(i=>console.log("hello"),1000)};
+    const data =await p;
+    data()
+    
+}
+runAsync()
+
+console.log("done");*/
+
+async function runAsync(){
+    console.log("API called");
+    const res= fetch  ("data.txt"); 
+    const data=await res.then(i=>console.log() )
+}
+
+runAsync()

@@ -141,15 +141,24 @@ console.log(swift);*/
 // console.log(Car());
 
 class Car {
+    x=50;
+    #z=100;
+
     constructor(name, power, torque, price) {
         this.name = name;
         this.power = power;
         this.torque = torque;
         this.price = price;
     }
+    start(){return this.name+"starts"}
+    checkPrivate(){
+        return this.#z
+    }
+    
 };
+
 const swift = new Car("alto", 40, 50, 100000);
-// console.log(swift);
+console.log(swift);
 
 class Suzuki extends Car {
     w=2;
@@ -170,3 +179,10 @@ const fortuner= new Toyota("fortuner",300,240,300000);
 console.log(fortuner);
 console.log(breza);
 console.log(nexa);
+
+setTimeout(()=>{
+    console.log("hello");
+    
+},1000);
+
+console.log("End Done ");
