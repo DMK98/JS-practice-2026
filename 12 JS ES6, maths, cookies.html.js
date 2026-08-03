@@ -1,18 +1,18 @@
 "use strict"
 
-const a=[3,4,5,8,9];
+const a = [3, 4, 5, 8, 9];
 // const x=a[0],y=a[1],z=a[2];
 // console.log(x,y,z);
 // const[x,y,z]=a;
 // console.log(x,y,z);
-const company={comapny:"tcs",address:"noida",branchId:123};
-const emp={name:"manish", age:21,...company};
+const company = { comapny: "tcs", address: "noida", branchId: 123 };
+const emp = { name: "manish", age: 21, ...company };
 // const name=b.name,power=b.power;
 // const{name,age}=stu;
 
 // console.log(name);
 
-let x=5,y=9;
+let x = 5, y = 9;
 // let c=x;
 // x=y;
 // y=c;
@@ -68,8 +68,53 @@ console.log(Math.max(...data));
 // let b=a1.concat(...a2);
 // console.log(b);
 
-let str="abcd";
+/*let str="abcd";
 let arr=[...str];
-console.log(arr);
+console.log(arr);*/
 
+/*const arr1=[10,20,30];
+const arr2=[...arr1];
+console.log(arr1);
+console.log(arr2);*/
+
+// const number=[10,20,30];
+// console.log(...number);
+
+/*function student(...name){
+    console.log(name);
+    
+}
+student("manish","rahul","amit")*/
+
+/*function demo(a,b,...rest){
+    console.log(a);
+    console.log(b);
+    console.log(rest);    
+}
+demo(10,20,30,40,50)*/
+/*function test(a, ...b) {
+    console.log(a);
+    console.log(b);
+}
+
+test(10, 20, 30, 40);*/
+
+
+/*const [...fruits] = ["Apple", "Banana", "Mango", "Orange"];
+console.log(fruits);
+console.log(fruits[1]);*/
+
+/*function sum(...numbers) {
+    console.log(numbers);
+}
+
+sum(10, 20, 30,40);*/
+
+function demo(a,b,...rest){
+    console.log(a);
+    console.log(b);
+    console.log(rest);
+}
+
+demo(10,20,30,40,50);
 
