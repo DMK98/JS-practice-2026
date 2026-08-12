@@ -220,13 +220,13 @@ console.log(name);
 console.log(age);
 console.log(city);*/
 
-function* generator(){
-        yield 1;
-        yield 2;
-        yield 3;
-        return 4;
+function* generator() {
+    yield 1;
+    yield 2;
+    yield 3;
+    return 4;
 }
-const gen=generator();
+const gen = generator();
 // console.log(gen.next());
 // console.log(gen.next());
 // console.log(gen.next());
@@ -241,3 +241,28 @@ const gen=generator();
 // console.log(Math.max(...[2,4,8,9]));
 // console.log(Math.min(...[2,4,8,9]));
 
+/*let n1 = document.querySelector(".n1").value = Math.floor(Math.random() * 9);
+let n2 = document.querySelector(".n2").value = Math.floor(Math.random() * 9);
+// let n3=document.querySelector(".n3");
+document.querySelector(".check").addEventListener("click", function () {
+    event.preventDefault()
+    let nv1 = document.querySelector(".n1").value;
+    let nv2 = document.querySelector(".n2").value;
+    let n3 = document.querySelector(".n3");
+    console.log(n1, n2, n3);
+    if (nv1 === nv2) {
+        console.log("same");
+        n3.value = "same";
+    } else {
+        console.log("not same");
+        n3.value = "Not same";
+    }
+});
+document.querySelector(".reset").addEventListener("click", function () {
+   n1 .value = Math.floor(Math.random() * 9);
+   n2 .value = Math.floor(Math.random() * 9);
+    console.log("mk");
+
+})*/
+
+document.cookie="city:noida"
