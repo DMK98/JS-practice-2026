@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        form>div {
+            margin: 15px 0;
+        }
+    </style>
+
 </head>
+
 <body>
     <header>
-        <h1>Js windows objects and form validation</h1>    
+        <h1>Js windows objects and form validation</h1>
     </header>
     <main>
         <p>lorem</p>
         <p>lorem</p>
-        <button class="btn open">Open</button>
+        <button class="btn open">Open</button><br>
+        <label>Pincode <input type="text" class="pincode"></label>
+        <button class="btn">Search</button>
+        <output class="ans"></output><br>
+        <label>Email :<input type="email" class="email"></label>
+        <output class="emailAns"></output><br>
+        <label>Password :<input type="text" class="password"></label>
+        <output class="passwordAns"></output><br>
+        <h2>Form validation</h2>
+        <form action="" name="signup" novalidate>
+            <div>
+                <label>Name: <input type="text" name="name" class="input" required><span></span></label>
+            </div>
+            <div>
+                <label>Age: <input type="number" name="age" min="18" max="28" required
+                        class="input"><span></span></label>
+            </div>
+            <div>
+                <label>Resume: <input type="file" name="resume" required class="input" accept=".pdf,.doc,.docx"><span></span></label>
+            </div>
+            <div>
+                <button class="btn">signup</button>
+            </div>
+
+        </form>
     </main>
     <footer>
         <p>&copy; Copyright 2026</p>
@@ -21,4 +59,5 @@
     <script src="./13Js windows objects and form validation.js"></script>
     <!-- <script src="./4.html"></script> -->
 </body>
+
 </html>
