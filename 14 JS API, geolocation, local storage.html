@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS API, geolocation, local storage, canvas and charts</title>
+</head>
+<style>
+    .table {
+        width: 500px;
+        border-collapse: collapse;
+        ;
+        border: 2px solid #333;
+    }
+
+    .table th,
+    .table td {
+        border: 1px solid #ccc;
+        text-align: left;
+    }
+
+    .table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+    .table tr:hover {
+        background-color: #f8f8f8;
+    }
+
+    .table td {
+        color: #444;
+    }
+
+    .mode {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+    }
+    .mode input + span{display: inline;}
+    .mode input + span+span{display: none;}
+    .mode input:checked + span{display: none;}
+    .mode input:checked + span+span{display:inline;}
+</style>
+
+<body>
+    <label class="mode">
+        <input switch type="checkbox">:
+        <span>light</span>
+        <span>Dark</span>
+    </label>
+    <header>
+        <h1>JS API, geolocation, local storage, canvas and charts</h1>
+    </header>
+    <nav>
+        <a href="">Link</a>
+    </nav>
+    <main>
+        <p> main para lorem ipsum</p>
+        <button class="btn geo"> Check</button>
+        <button class="btn stop" disabled> disabled</button>
+        <span class="err"></span>
+        <p></p>
+        <table class="table">
+            <tr>
+                <th>Property</th>
+                <th>value</th>
+            </tr>
+            <tr>
+                <th>Latitude</th>
+                <td class="lat">
+                    </th>
+            </tr>
+            <tr>
+                <th>Longitute</th>
+                <td class="lan"></td>
+            </tr>
+            <tr>
+                <th>Accuracy</th>
+                <td class="acc"></td>
+            </tr>
+            <tr>
+                <th>Altitude</th>
+                <td class="alt"></td>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; copyright</p>
+    </footer>
+
+    <script src="./14JS API, geolocation, local storage.js">
+
+    </script>
+</body>
+
+</html>
