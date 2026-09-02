@@ -58,8 +58,8 @@ document.querySelector(".password").addEventListener("input", function () {
 document.signup.addEventListener("submit", function (e) {
     this.name.nextElementSibling.innerHTML = "";
     this.age.nextElementSibling.innerHTML = "";
-
-    if (this.name.value.trim() == "") {
+    let nameCheck=/^[a-zA-Z]+$/;
+    if (this.name.value.trim() == "" || !nameCheck.test(this.name.value)   ) {
         e.preventDefault();
         this.name.nextElementSibling.innerHTML = "Enter name";
         this.name.nextElementSibling.style = "color:red";
@@ -74,10 +74,14 @@ document.signup.addEventListener("submit", function (e) {
         this.age.nextElementSibling.innerHTML = "Enter valid age";
         this.age.nextElementSibling.style = "color:red";
         this.age.focus();
-    // } else if (this.resume.value=="") {
-    } else if (this.resume.files[0].size > 1048576) {
+    } else if (this.resume.value == "") {
         e.preventDefault();
         this.resume.nextElementSibling.innerHTML = "Upload resume";
+        this.resume.nextElementSibling.style = "color:red";
+        this.resume.focus();
+    } else if (this.resume.files[0].size > 1048576) {
+         e.preventDefault();
+        this.resume.nextElementSibling.innerHTML = "resume file size exceed";
         this.resume.nextElementSibling.style = "color:red";
         this.resume.focus();
     }
