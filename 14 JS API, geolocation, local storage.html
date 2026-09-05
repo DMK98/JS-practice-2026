@@ -25,13 +25,13 @@
         font-weight: bold;
     }
 
-    /* .table tr:hover {
+    .table tr:hover {
         background-color: #f8f8f8;
-    } */
-
-    .table td {
-        color: #444;
     }
+
+    /* .table td {
+        color: #444;
+    } */
 
     .mode {
         position: absolute;
@@ -62,21 +62,17 @@
     canvas {
         box-shadow: 0 0 5px red;
         border-radius: 5px;
+        display: inline-block;
     }
 
     svg {
-        box-shadow: 0 0 5px green;
+        box-shadow: 0 0 5px #1fc345;
         border-radius: 5px;
-    }
-    .col-6{width: 400px;}
-    .col-6{width: 400px;display: inline-block;}
-    @media screen and (max-width:720px){
-        .col-6{flex-basis: 100%;max-width: 100%;}
     }
 </style>
 
 <body>
-
+    <noscript>Please enable javascript</noscript>
     <label class="mode">
         <input switch type="checkbox">:
         <span>light</span>
@@ -117,20 +113,12 @@
                 <td class="alt"></td>
             </tr>
         </table>
-        <canvas width="250" height="250">
-
+        <canvas width="300" height="250">
         </canvas>
-        <svg width="250" height="250">
-
+        <svg width="300" height="250">
+            <circle cx="200" cy="150" r="50" fill="aqua"></circle>
         </svg>
 
-        <div class="chart-container">
-            <h2>HTML 5 Chart</h2>
-            <div class="row">
-                <div class="col-6"><canvas class="chart1"></canvas></div>
-                <div class="col-6"><canvas class="chart2"></canvas></div>
-            </div>
-        </div>
 
 
     </main>
@@ -138,7 +126,6 @@
         <p>&copy; copyright</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./14JS API, geolocation, local storage.js">
 
     </script>

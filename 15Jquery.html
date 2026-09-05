@@ -6,6 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    * {
+        margin: 2px;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        border: 1px solid;
+        margin: auto;
+        width: 80%;
+        padding: 5px;
+    }
+
+    header,
+    main,
+    footer {
+        border: 1px solid;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    .box,
+    .faq {
+        padding: 5px;
+        box-shadow: rgba(191, 180, 180, 0.922) 0px 3px 8px;
+        border-radius: 5px;
+    }
+
+    .faq {
+        border: 1px solid black;
+        padding: 5px;
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+
+    .collapse {
+        border: 1px solid black;
+        padding: 5px;
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+
+    .collapse a {
+        /* border: 1px solid; */
+
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        text-decoration: none;
+        padding-right: 5px;
+        border-radius: 5px;
+    }
+
+    .collapse p {
+        display: none;
+    }
+
+    .collapse a::after {
+        content: "+";
+        position: relative;
+        left: 5px;
+    }
+
+    .collapse a.active::after {
+        content: "—";
+    }
+    .heading3{
+        display:inline-block;
+        width: 100%;
+        background: rgb(154, 142, 142);
+        border-radius:5px;
+        padding: 5px;
+        cursor: pointer;
+    } 
+    .faq{display: none;}
+    .freq h3::after{content: "+";}
+    .freq h3.active::after{content: "-";}
+</style>
 
 <body>
     <div class="container">
@@ -14,9 +93,46 @@
         </header>
         <main>
             <h2>main</h2>
-            <input type="text">
-            <output></output>
             <p class="message">Hello</p>
+            <button class="btn1">Click me A</button>
+            <output class="opt1"></output>
+            <button class="btn2">Click me B</button>
+            <output class="opt2"></output>
+            <button class="btn3">Click me C</button>
+            <output class="opt3"></output>
+            <hr>
+            <input type="text">
+            <output class="input"></output>
+            <hr>
+            <button class="hide">Hide</button>
+            <button class="show">Show</button>
+            <button class="toogle">Toogle</button>
+            <div class="box">
+                <h3>Box</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia voluptas consequatur laboriosam esse!
+                    Magnam dolore debitis repellendus earum cumque quisquam.</p>
+            </div>
+            <div class="freq">
+                <h3 class="heading3">FAQ</h3>
+            </div>
+            <div class="faq">
+                <div class="collapse">
+                    <a href="">FAQ 1</a>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. endis aut error quo quidem explicabo
+                        aspernatur incidunt expedita exercitationem harum labore aliquid.</p>
+                </div>
+
+                <div class="collapse">
+                    <a href="">FAQ 2</a>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, mago quidem explicabo aspernatur
+                        incidunt expedita exercitationem harum labore aliquid.</p>
+                </div>
+                <div class="collapse">
+                    <a href="">FAQ 3</a>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, magnamquidem explicabo aspernatur
+                        incidunt expedita exercitationem harum labore aliquid.</p>
+                </div>
+            </div>
         </main>
         <footer>
             <p>&copy;2024</p>

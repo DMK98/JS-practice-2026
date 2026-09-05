@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js windows objects and form validation</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        border: 1px solid red;
+    }
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid green;
+    }
+    button {
+        width: 100px;
+    }
+    .submit-btn{background: green;}
+    .reset-btn{background: red;}
+</style>
+
+<body>
+    <header>
+        <h1>js windows objects and form validation</h1>
+    </header>
+    <main>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <!-- <button class="btn ">Open</button> -->
+        <!-- <button class="btn camera">Open Camera</button>
+        <video src="">Play</video> -->
+        <!-- <form action="">
+            <div>
+                <label>Pincode <input type="search" class="input pincode" required pattern="[\d]{6}"> </label>
+                <button type="button" class="pin_check">Search</button>
+                <output class="pincode_output"></output><br>
+            </div>
+            <output class="pincode_output"></output>
+            <div>
+                <label>Mobile No <input type="number" class="mob_number"> </label>
+                <button type="button" class="mob_number_check">Search</button>
+                <span class="pinEntered"></span>
+                <output class="mob_number_output"></output><br>
+                <button class="camera">Camera</button>
+            </div>
+            <button type="reset">reset</button>
+        </form>  -->
+        <form action="">
+            <table>
+                <tr>
+                    <td><label for="name">Name</label></td>
+                    <td><input type="text" id="name"></td>
+                    <span class="name_err"></span>
+                </tr>
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td><input type="text" id="email" class="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="mobileno">Mobile NO</label></td>
+                    <td><input type="number" id="mobileno"></td>
+                </tr>
+                <tr>
+                    <td><label for="pincode" >Pincode</label></td>
+                    <td><input id="pincode" type="search" class="pincode" pattern="[1-9][\d]{5}" required></td>
+                </tr>
+                <tr>
+                    <td><label for="city">City</label></td>
+                    <td><input type="text" id="city"></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password</label></td>
+                    <td><input type="text" id="password"></td>
+                </tr>
+
+            </table>
+            <div>
+                <button type="submit" class="submit-btn">Submit</button>
+                <button type="reset" class="reset-btn">Reset</button>
+            </div>
+        </form>
+        <footer>
+            <p>&copy;</p>
+        </footer>
+
+        <script src="./13js windows objects and form validation.js"></script>
+</body>
+
+</html>
