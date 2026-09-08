@@ -12,76 +12,44 @@
 
 // $("p").text("Welcome");
 // $("p").text("manish")
-/*$(".btn1").click(function(){
-    // console.log($(this).text()); 
-    // let click=$(".btn").click;
-    // console.log(click);
-    $(".opt1").text($(".btn1").text())
-});
-$(".btn2").click(function(){
-    // console.log($(this).text()); 
-    // let click=$(".btn").click;
-    // console.log(click);
-    $(".opt2").text($(".btn2").text())
-});
-$(".btn3").click(function(){
-    // console.log($(this).text()); 
-    // let click=$(".btn").click;
-    // console.log(click);
-    $(".opt3").text($(".btn3").text())
-});*/
-
-/*$(".btn1, .btn2, .btn3").toArray().forEach(function(button, index) {
-
-    $(button).click(function() {
-
-        $(".opt" + (index + 1)).text($(button).text());
-
-    });
-
-});*/
-
-/*let buttons = $(".btn1, .btn2, .btn3");
-for(let button of buttons){
-    $(button).click(function(){
-        $(this).next("output").text($(this).text());
-    });
-};*/
+// let x=$(".message").text()
+// console.log(x);
+// $(".message").text("welcome");
+// $("#heading").text("Welcome Buddy");
 
 
-$(".btn1, .btn2, .btn3").each(function() {
-    $(this).click(function() {
-        $(this).next("output").text($(this).text());
-    });
-});
+// let z=$(".message").text();
+// also tell me below line will this work
+/*$(".btn").click(function(){
+    $(".message").text("welcome");
+    $("#heading").text("Welcome buddy")
+})*/
 
-$("input").on("input", function () {
-    $(".input").text(this.value)
-});
+/*$("#btn").click(function(){
+    $("#message").text("Welcome");
+})*/
 
-$(".hide").on("click",function(){
-    // $(".box").hide("slow")
-    $(".box").slideUp("slow")
-    // $(".box").hide("slow")
-});
+/*console.log(1);
+$(function(){console.log(2)});
+console.log(3);*/
 
+/*console.log("A");
+function abc(){
+    console.log("B");    
+}
+console.log("C");
+abc()*/
 
-$(".show").on("click",function(){
-    // $(".box").show("slow")
-  $(".box").slideDown("slow")
-    // $(".box").show("slow")
-});
+/*$(function(){console.log("D")});*/
+/*$("h3").append(3+2);*/
 
-$(".toogle").on("click",function(){
-    // $(".box").toggle("slow")
-    $(".box").fadeToggle("slow")
-});
+/*$(function(){
+    $("input").on("input",function(){
+        $(this).next().text($(this).val())
+    })
+})*/
 
-$(".collapse a").click(function(e){
-    e.preventDefault();
-    $(this).toggleClass("active");
-    $(this).next("p").slideToggle();;
-});
-$(".heading3").click(function(){
-    $(".faq").fadeToggle("slow");
+$(".btn").click(function(){
+    console.log($(this).text());
+    
 })
