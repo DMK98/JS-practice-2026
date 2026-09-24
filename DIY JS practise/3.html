@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .student{
+            border: 1px solid red;
+            border-radius: 5px;
+            box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            display: inline-block;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h2>take input roll and name from user after click on submit it on webpage and make a close button clicking on close
+        it will close</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td><label for="name">Name : </label></td>
+                <td><input type="text" id="name"> </td>
+            </tr>
+            <tr>
+                <td><label for="roll">Roll :</label></td>
+                <td><input type="number" id="roll"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="submit">Submit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <div class="student">
+            <h2></h2>
+            <p></p>
+    </div>
+
+
+    <script>
+
+        let submitBtn = document.querySelector(".submit");
+        let studentRecords=document.querySelector(".student");
+        let printStudentRoll=document.querySelector(".student h2")
+        let printStudentName=document.querySelector(".student p")
+        submitBtn.addEventListener('click', function () {
+            let stuName = document.querySelector("#name").value;
+            let stuRoll = document.querySelector("#roll").value;
+            console.log(stuName);
+            console.log(stuRoll);
+           
+
+            printStudentRoll.innerHTML+=stuRoll;
+            printStudentName.innerHTML+=stuName;
+        })
+
+    </script>
+</body>
+
+</html>

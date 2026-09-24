@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1 DOM </title>
+    <style>
+        * {
+            margin-block: 5px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #message {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- example 1  -->
+    <h1 id="heading">Hello JavaScript</h1>
+    <!-- example 2  -->
+    <p id="message">Hello World</p>
+    <button id="btn">change</button>
+    <!-- example 3  -->
+    <h2 id="count">0</h2>
+    <button id="increase">Increase</button>
+    <br>
+    <!-- example 4  -->
+    <input type="text" id="name">
+    <button id="show">Show</button>
+    <p id="oninput"></p>
+    <p id="result"></p>
+
+
+
+    <script>
+        // ============ Task 1=========================
+        // document.querySelector("#heading").innerHTML = "Welcome to DOM"
+        const button = document.querySelector("#btn");
+        const message = document.querySelector("#message");
+        button.addEventListener("click", () => {
+            message.style.color = "Red"
+            message.style.background = "yellow"
+        })
+        // ============ Task 2 =========================
+
+        const count = document.querySelector("#count");
+        const increaseCount = document.querySelector("#increase");
+        let x = 0;
+        increaseCount.addEventListener("click", () => {
+            x = x + 1
+            count.innerHTML = x;
+            if (x >= 10) {
+                count.style.color = "red";
+                count.style.fontWeight = "400";
+            } if (x >= 15) {
+                count.style.color = "blue";
+                count.style.fontWeight = "900";
+            }
+        })
+        // ============ Task 3 =========================
+
+      let show = document.querySelector("#show");
+        let nameInput = document.querySelector("#name");
+        let oninput = document.querySelector("#oninput");
+        let result = document.querySelector("#result");
+
+
+        // Show text while typing
+        nameInput.addEventListener("input", () => {
+
+            oninput.innerHTML = nameInput.value;
+
+        });
+
+
+        // Show result when button is clicked
+        show.addEventListener("click", () => {
+
+            let name = nameInput.value;
+
+            console.log(name);
+
+            result.innerHTML = name;
+
+            // Clear input
+            nameInput.value = "";
+
+        });
+      
+       
+
+    </script>
+</body>
+
+</html>
